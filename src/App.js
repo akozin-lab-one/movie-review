@@ -15,19 +15,19 @@ const App = () => {
         <
         Routes >
         <
-        Route path = "/"
+        Route path = "/movie-review/"
         element = { < Main / > }
         / >        <
-        Route path = "/movies"
+        Route path = "/movie-review/movies"
         element = { < Main / > }
         / ><
-        Route path = "/movies/detail/:movieid"
+        Route path = "/movie-review/movies/detail/:movieid"
         element = { < Detail / > }
         / ><
-        Route path = "/tvshows"
+        Route path = "/movie-review/tvshows"
         element = { < SubMain / > }
         / ><
-        Route path = "/tvshows/detail/:tvshowId"
+        Route path = "/movie-review/tvshows/detail/:tvshowId"
         element = { < TVDetail / > }
         / > < /
         Routes > < /
