@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Not Found</title>
+</head>
+
+<body>
+    <script>
+        // Redirect to index.html when encountering a 404
+        const path = window.location.pathname;
+        if (path !== '/' && !path.startsWith('/movie-review/')) {
+            window.location.replace('/movie-review/');
+        }
+    </script>
+</body>
+
+</html>
