@@ -13,7 +13,7 @@ root.render( <
     <
     Provider store = { store } >
     <
-    BrowserRouter > <
+    BrowserRouter basename = "/movie-review" > <
     App / > < /BrowserRouter> < /
     Provider > < /
     React.StrictMode >

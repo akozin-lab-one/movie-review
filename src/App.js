@@ -15,7 +15,7 @@ const App = () => {
         <
         Routes >
         <
-        Route path = "/movie-review/"
+        Route path = "/"
         element = { < Main / > }
         / >        <
         Route path = "/movies"
