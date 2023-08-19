@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Navbar, TextInput } from "flowbite-react";
 import { api, api_key } from "./../api/index";
+import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { fetchmovies } from "../redux/action/movies";
 import { useLocation } from "react-router";
@@ -60,10 +61,18 @@ const Header = () => {
           </form>
         </div>
         <Navbar.Collapse>
-          <Navbar.Link className="hover:bg-green-200" href="/movie-review/movies">
+          {/* <Navbar.Link className="hover:bg-green-200" to={`/movies`}>
             <p>Movies</p>
           </Navbar.Link>
-          <Navbar.Link href="/movie-review/tvshows">TV Shows</Navbar.Link>
+          <Navbar.Link to={`/tvshows`}>TV Shows</Navbar.Link> */}
+          
+          <Link className="hover:text-green-200" to="/movies" aria-label="Browse Movies">
+            <span>Movies</span>
+          </Link>
+          <Link to="/tvshows" aria-label="Explore TV Shows">
+            <span>TV Shows</span>
+          </Link>
+          
         </Navbar.Collapse>
       </Navbar>
     </div>
