@@ -31,8 +31,8 @@ const Detail = () => {
 
   const total = movie.runtime;
   const hours = Math.floor(total / 60);
-  const remainSec = total % 3600;
-  const minutes = Math.floor(remainSec / 60);
+  // const remainSec = total % 3600;
+  const minutes = total % 60;
 
   console.log(movie);
 
