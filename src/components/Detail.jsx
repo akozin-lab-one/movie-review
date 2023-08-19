@@ -30,11 +30,9 @@ const Detail = () => {
   const movie = useSelector((state) => state.movies.movie);
 
   const total = movie.runtime;
-  const hours = Math.floor(total/60);
+  const hours = Math.floor(total / 60);
   const remainSec = total % 3600;
-  const minutes = Math.floor(remainSec/60);
-
-
+  const minutes = Math.floor(remainSec / 60);
 
   console.log(movie);
 
@@ -55,38 +53,75 @@ const Detail = () => {
           </div>
           {JSON.stringify(movie) !== {} ? (
             [
-              <Card
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-              >
-                <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <p>{movie.title}</p>
-                </h5>
-                <div className="font-normal text-gray-700 dark:text-gray-400">
-                  <p>{movie.overview}</p>
-                </div>
+              // <Card
+              //   imgAlt="Meaningful alt text for an image that is not purely decorative"
+              //   imgSrc={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
+              // >
+              //   <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              //     <p>{movie.title}</p>
+              //   </h5>
+              //   <div className="font-normal text-gray-700 dark:text-gray-400">
+              //     <p>{movie.overview}</p>
+              //   </div>
 
-                <div>
-                  <span className="bg-gray-900 text-white p-2 rounded-lg">
-                    <i class="fa-solid fa-check mr-2"></i>
-                    {movie.status}
-                  </span>
-                  <span className="bg-gray-900 text-white p-2 rounded-lg ml-2">
-                  <i class="fa-solid fa-users-line mr-2"></i>
-                    {movie.popularity}
-                  </span>
-                  <span className="bg-gray-900 text-white p-2 rounded-lg ml-2">
-                  <i class="fa-regular fa-calendar-days mr-2"></i>
-                    {movie.release_date}
-                  </span>
-                  <span className="bg-gray-900 text-white p-2 rounded-lg ml-2">
-                  <i class="fa-solid fa-video mr-2"></i>
-                  {
-                hours + ':' + minutes
-              }
-                  </span>
+              //   <div>
+              //     <span className="bg-gray-900 text-white p-2 rounded-lg">
+              //       <i class="fa-solid fa-check mr-2"></i>
+              //       {movie.status}
+              //     </span>
+              //     <span className="bg-gray-900 text-white p-2 rounded-lg ml-2">
+              //     <i class="fa-solid fa-users-line mr-2"></i>
+              //       {movie.popularity}
+              //     </span>
+              //     <span className="bg-gray-900 text-white p-2 rounded-lg ml-2">
+              //     <i class="fa-regular fa-calendar-days mr-2"></i>
+              //       {movie.release_date}
+              //     </span>
+              //     <span className="bg-gray-900 text-white p-2 rounded-lg ml-2">
+              //     <i class="fa-solid fa-video mr-2"></i>
+              //     {
+              //   hours + ':' + minutes
+              // }
+              //     </span>
+              //   </div>
+              // </Card>,
+              <div class="container mx-auto px-4 ">
+                <div class="grid grid-cols-3 gap-0  p-6">
+                  <div class="bg-gray-200 flex justify-center items-center rounded-l-lg p-1">
+                    <img className="w-1/2 md:w-1/4 lg:w-1/6" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="" />
+                  </div>
+                  <div class="bg-gray-300 col-span-2 rounded-r-lg p-4">
+                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                   <p>{movie.title}</p>
+                 </h5>
+                 <div className="font-normal text-gray-700 dark:text-gray-400">
+                   <p>{movie.overview}</p>
+                  </div>
+
+                 <div className="mt-4">
+                   <span className="bg-gray-900 text-white p-2 rounded-lg">
+                     <i class="fa-solid fa-check mr-2"></i>
+                     {movie.status}
+                   </span>
+                   <span className="bg-gray-900 text-white p-2 rounded-lg ml-2">
+                   <i class="fa-solid fa-users-line mr-2"></i>
+                     {movie.popularity}
+                   </span>
+                   <span className="bg-gray-900 text-white p-2 rounded-lg ml-2">
+                   <i class="fa-regular fa-calendar-days mr-2"></i>
+                     {movie.release_date}
+                   </span>
+                   <span className="bg-gray-900 text-white p-2 rounded-lg ml-2">
+                   <i class="fa-solid fa-video mr-2"></i>
+                   {
+                 hours + ':' + minutes
+               }
+                   </span>
+                 </div>
+
+                  </div>
                 </div>
-              </Card>,
+              </div>,
             ]
           ) : (
             <div className="text-center">

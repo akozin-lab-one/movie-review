@@ -30,6 +30,7 @@ const MovieCard = ({ movies }) => {
             
           </div>
         </Card>
+
       </Link>
     </div>
   );
