@@ -60,10 +60,10 @@ const Header = () => {
           </form>
         </div>
         <Navbar.Collapse>
-          <Navbar.Link className="hover:bg-green-200" href="/movies">
+          <Navbar.Link className="hover:bg-green-200" href="/movie-review/movies">
             <p>Movies</p>
           </Navbar.Link>
-          <Navbar.Link href="/tvshows">TV Shows</Navbar.Link>
+          <Navbar.Link href="/movie-review/tvshows">TV Shows</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     </div>
