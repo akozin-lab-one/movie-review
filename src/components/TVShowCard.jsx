@@ -15,9 +15,9 @@ const TVShowCard = ({ tvshows }) => {
               <p>{tvshows.original_name}</p>
             </h5>
 
-            <p className="font-normal text-gray-700 dark:text-gray-400">
+            {/* <p className="font-normal text-gray-700 dark:text-gray-400">
               {tvshows.overview.slice(0, 150)}
-            </p>
+            </p> */}
 
             <div className="mr-4">
               <span className="bg-gray-900 text-white p-2 rounded-lg mr-4">

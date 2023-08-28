@@ -1,5 +1,12 @@
 import { actionType } from "../action-type"
 
+export const fetchupmovies = (movies) => {
+    return {
+        type: actionType.FETCH_UPMOVIES,
+        payload: movies
+    }
+}
+
 export const fetchmovies = (movies) => {
     return {
         type: actionType.FETCH_MOVIES,

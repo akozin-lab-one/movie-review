@@ -7,6 +7,9 @@ const initialState = {
 
 export const movieReducer = (state = initialState, { type, payload }) => {
     switch (type) {
+        case actionType.FETCH_UPMOVIES:
+            return {...initialState, movies: payload }
+
         case actionType.FETCH_MOVIES:
             return {...initialState, movies: payload }
 

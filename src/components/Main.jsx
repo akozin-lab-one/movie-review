@@ -3,7 +3,8 @@ import Movies from "./Movies";
 import { api, api_key } from "../api";
 import { useDispatch } from "react-redux";
 import { fetchmovies } from "../redux/action/movies";
-
+import Footer from "./Footer";
+import CarouselM from "./CarouselM";
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -13,12 +14,17 @@ const Main = () => {
     // console.log(res.data.results);
   };
 
-  useEffect(() => {getMovies()}, []);
-
+  useEffect(() => {
+    getMovies();
+  }, []);
 
   return (
     <div>
+      <CarouselM/>
       <Movies />
+      <div className="my-3">
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router";
 import { api, api_key } from "../api";
 import { useDispatch, useSelector } from "react-redux";
 import { deSelectmovies, selectmovies } from "../redux/action/movies";
+import Footer from "./Footer";
 
 const Detail = () => {
   const navigate = useNavigate();
@@ -130,6 +131,7 @@ const Detail = () => {
           )}
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
